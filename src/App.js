@@ -28,6 +28,7 @@ import Market from "./pages/Market";
 import { isMobile } from "react-device-detect";
 import BoardMembers from "./pages/Board_members";
 import Journey from "./pages/Journey";
+import { Analytics } from "@vercel/analytics/react";
 
 function Preloader() {
   return (
@@ -56,7 +57,6 @@ function App() {
 
     // Clear timeout when component unmounts
     return () => clearTimeout(timeout);
-    
   }, []);
 
   // if (isMobile) {
@@ -64,7 +64,9 @@ function App() {
   // }
 
   return (
-    <div className="App">{isLoading ? <Preloader /> : <MainContent />}</div>
+    <div className="App">
+      {isLoading ? <Preloader /> : <MainContent />} <Analytics />
+    </div>
   );
 }
 
