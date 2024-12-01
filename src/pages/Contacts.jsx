@@ -233,8 +233,8 @@ export default function Contacts() {
                 />
               </svg>
               <p>
-                robin.singh@gmail.com <br />
-                shashank.sawai@gmail.com
+                robin.singh@dashdynamic.in <br />
+                shashank.sawai@dashdynamic.in
               </p>
               {/* <p></p> */}
             </div>
