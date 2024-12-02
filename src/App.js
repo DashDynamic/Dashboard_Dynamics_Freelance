@@ -30,6 +30,7 @@ import BoardMembers from "./pages/Board_members";
 import Journey from "./pages/Journey";
 import { Analytics } from "@vercel/analytics/react";
 import { initGA, logPageView } from "./utils/analytics";
+import { useLocation } from "react-router-dom";
 
 function Preloader() {
   return (
