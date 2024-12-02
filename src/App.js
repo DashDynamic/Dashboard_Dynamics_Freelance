@@ -29,6 +29,7 @@ import { isMobile } from "react-device-detect";
 import BoardMembers from "./pages/Board_members";
 import Journey from "./pages/Journey";
 import { Analytics } from "@vercel/analytics/react";
+import { initGA, logPageView } from "./utils/analytics";
 
 function Preloader() {
   return (
@@ -48,6 +49,17 @@ function Preloader() {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Replace 'G-XXXXXXXXXX' with your Google Analytics tracking ID
+    initGA("G-BL66T1YCXQ");
+  }, []);
+
+  useEffect(() => {
+    // Log page view on route change
+    logPageView();
+  }, [location]);
 
   useEffect(() => {
     // Simulate loading delay
