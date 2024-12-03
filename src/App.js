@@ -43,6 +43,7 @@ function AnalyticsWrapper() {
   const location = useLocation();
 
   useEffect(() => {
+    // Log page view when location changes
     logPageView();
   }, [location]);
 
@@ -85,19 +86,22 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Initialize Google Analytics
     initGA("G-BL66T1YCXQ");
+
+    // Handle preloader
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, []); // Empty dependency array means this runs once on mount
 
   return (
     <BrowserRouter>
       <div className="App">
         {isLoading ? <Preloader /> : <MainContent />}
-        <Analytics />
+        <Analytics /> {/* Vercel Analytics */}
       </div>
     </BrowserRouter>
   );
