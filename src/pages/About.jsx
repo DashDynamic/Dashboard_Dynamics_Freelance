@@ -469,7 +469,7 @@ export default function About() {
             <p>Simply Park and Charge</p>
           </motion.div>
 
-          <img src="../assets/about/about_1.png" alt="" />
+          <img src="../assets/about/about_1.png" alt="Faster EV Charging Technology" />
         </div>
       </div>
       {!mobile && (
@@ -540,7 +540,7 @@ export default function About() {
         </div>
       </div>
       <div className="div_4">
-        <img src="../assets/about/about_charger.png" alt="" />
+        <img src="../assets/about/about_charger.png" alt="Wireless EV Charging" />
         <div className="content">
           <p>
             <svg
@@ -932,7 +932,7 @@ export default function About() {
           </motion.p>
         </div>
         <div className="img">
-          <img src="../assets/about/about_5.png" alt="" />
+          <img src="../assets/about/about_5.png" alt="wireless charging technology" />
           <div className="text">
             <h1>Vision</h1>
             <p>
@@ -963,7 +963,7 @@ export default function About() {
             <h1>WIRELESS CHARGING NETWORK STATIONS</h1>
           </motion.div>
           <div className="content">
-            {!mobile && <img src="../assets/about/about_2.png" alt="" />}
+            {!mobile && <img src="../assets/about/about_2.png" alt="WIRELESS CHARGING NETWORK STATIONS" />}
             <div className="text">
               <p>
                 We aim to assist CPOs in establishing an efficient charging
@@ -971,7 +971,7 @@ export default function About() {
                 stations such that the investment be minimal while the revenue
                 generated is substantial.
               </p>
-              {mobile && <img src="../assets/about/about_2.png" alt="" />}
+              {mobile && <img src="../assets/about/about_2.png" alt="Wireless charging for drone towers" />}
               <p>
                 Our plan is to instate wireless charging in a plug-in charging
                 station. So, the need for management staff could be cut-off
@@ -1045,7 +1045,7 @@ export default function About() {
             <h1>SUSTAINABLE FUTURE</h1>
           </div>
           <div className="content">
-            {!mobile && <img src="../assets/about/about_4.png" alt="" />}
+            {!mobile && <img src="../assets/about/about_4.png" alt="SUSTAINABLE  EV CHARGING" />}
             <div className="text">
               <p>
                 We're committed to reducing carbon footprints by eliminating
