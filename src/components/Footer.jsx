@@ -119,7 +119,7 @@ export default function Footer() {
           <div className="tnc">
             <div className="tnc_1">
               <a href="">Privacy Policy</a>
-              <a href="">Terms and Services</a>
+              <a href="/TermsAndConditionsPage">Terms and Services</a>
             </div>
             <div className="copy">
               <h3>
