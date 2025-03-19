@@ -28,6 +28,7 @@ import About from "./pages/About";
 import Market from "./pages/Market";
 import BoardMembers from "./pages/Board_members";
 import Journey from "./pages/Journey";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 
 // Preloader Component
 function Preloader() {
@@ -75,6 +76,7 @@ function MainContent() {
         <Route path="/market" element={<Market />} />
         <Route path="/board_members" element={<BoardMembers />} />
         <Route path="/journey" element={<Journey />} />
+        <Route path="/TermsAndConditionsPage" element={<TermsAndConditionsPage />} />
       </Routes>
       <Footer />
     </>
