@@ -34,7 +34,7 @@ export default function Products() {
         </div>
 
         <div className="sec_3">
-          <img className='web' src="../assets/products/Group 4603.png" alt="" />
+          <img className='web' src="../assets/products/Group_4603[1].png" alt="" />
           <img className='web' src="../assets/products/p2.png" alt="" />
           <img className='web' src="../assets/products/p3.png" alt="" />
           <img className='web' src="../assets/products/p4.png" alt="" />
@@ -44,7 +44,7 @@ export default function Products() {
 
 
           {/* //Mobile */}
-          <img className='mob' src="../assets/products/mp1.png" alt="" />
+          <img className='mob' src="../assets/products/Group_4605[1].png" alt="" />
           <img className='mob' src="../assets/products/mp2.png" alt="" />
           <img className='mob' src="../assets/products/mp3.png" alt="" />
           <img className='mob' src="../assets/products/mp4.png" alt="" />
