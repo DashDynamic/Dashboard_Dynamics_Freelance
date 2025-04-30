@@ -44,7 +44,7 @@ export default function Products() {
 
 
           {/* //Mobile */}
-          <img className='mob' src="../assets/products/mobile.png" alt="" />
+          <img className='mob' src="../assets/products/new2.png" alt="" />
           <img className='mob' src="../assets/products/mp2.png" alt="" />
           <img className='mob' src="../assets/products/mp3.png" alt="" />
           <img className='mob' src="../assets/products/mp4.png" alt="" />
