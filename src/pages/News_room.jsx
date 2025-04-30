@@ -426,19 +426,19 @@ const News = () => {
   const otherNewsData = [
     {
       id: 1,
-      title: "This year, it could be a million e-bikes fame"
+      title: "Dash Team Presented at Startup Mahakumbh 2025"
     },
     {
       id: 2,
-      title: "Electric cab aggregators on expansion, hiring spree"
+      title: "Convergence India Expo 2025"
     },
     {
       id: 3,
-      title: "Audi to launch electric SUV Q8 e-tron in India in August"
+      title: "Bharat Mobility 2025 at Pragati maidan"
     },
     {
       id: 4,
-      title: "Audi to launch electric SUV Q8 e-tron in India in August"
+      title: "Graham Bell Award 2025,Best R&D Award 2025."
     }
   ];
 
