@@ -34,7 +34,7 @@ export default function Products() {
         </div>
 
         <div className="sec_3">
-          <img className='web' src="../assets/products/web.png" alt="" />
+          <img className='web' src="../assets/products/web2.png" alt="" />
           <img className='web' src="../assets/products/p2.png" alt="" />
           <img className='web' src="../assets/products/p3.png" alt="" />
           <img className='web' src="../assets/products/p4.png" alt="" />
