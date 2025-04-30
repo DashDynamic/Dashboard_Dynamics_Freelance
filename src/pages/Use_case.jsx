@@ -117,7 +117,7 @@ export default function UseCase() {
                   stiffness: 60,
                 }}
               />
-              <p>Charge Point Opperator</p>
+              <p>Charge point operator</p>
             </a>
             <a href="/Fleets" className="a6">
               <motion.img
