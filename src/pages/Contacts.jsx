@@ -205,7 +205,11 @@ export default function Contacts() {
       </Landing>
       <div className="contact_inner">
         <div className="contact_head">
-          <button>CONTACT US</button>
+{/*           <button>CONTACT US</button> */}
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5RjFNZyK-jDCNsh-Fu8FG52ER9eDNLnsDNgfTQyupZkX4bA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+            <button>CONTACT US</button>
+          </a>
+
           <p>
             Dash is leading the way to a more sustainable future with a Charging
             as a Service business model and “invisible” charging infrastructure
