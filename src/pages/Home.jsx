@@ -1313,7 +1313,7 @@ export default function Home() {
                   stiffness: 60,
                 }}
               />
-              <p>Charge Point Opperator</p>
+              <p>Charge Point Operator</p>
             </a>
             <a href="/Fleets" className="a6">
               <motion.img
