@@ -383,6 +383,118 @@
 // };
 
 // export default News;
+// import React, { useState } from 'react';
+// import './../style.scss';
+
+// const News = () => {
+//   const [showVideo, setShowVideo] = useState(true);
+
+//   const headlinesData = [
+//     {
+//       id: 1,
+//       title: "Team Dash Dynamic Presented their live wireless charging at Bharat Mobility Global Expo 2025.",
+//       videoUrl: "https://www.youtube.com/embed/9IAJVcNzjc8?si=5eDMN3gr835XGIVI",
+//       image: "https://img.youtube.com/vi/9IAJVcNzjc8/maxresdefault.jpg", // YouTube thumbnail
+//       className: "large-headline"
+//     },
+//     {
+//       id: 2,
+//       title: "Graham Bell Award 2025.",
+//       image: "/assets/news/2.jpg",
+//       className: "medium-headline"
+//     },
+//     {
+//       id: 3,
+//       title: "Exciting visit from Hyundai Corporation Team!",
+//       image: "/assets/news/3.jpg",
+//       className: "small-headline"
+//     },
+//     {
+//       id: 4,
+//       title: "DMRC Visits Our Office!",
+//       image: "/assets/news/4.jpg",
+//       className: "small-headline"
+//     },
+//     {
+//       id: 5,
+//       title: "Tech Talk with Robin Singh",
+//       image: "/assets/news/5.jpg",
+//       className: "small-headline"
+//     }
+//   ];
+
+//   const otherNewsData = [
+//     {
+//       id: 1,
+//       title: "Dash Team Presented at Startup Mahakumbh 2025"
+//     },
+//     {
+//       id: 2,
+//       title: "Convergence India Expo 2025"
+//     },
+//     {
+//       id: 3,
+//       title: "Bharat Mobility 2025 at Pragati maidan"
+//     },
+//     {
+//       id: 4,
+//       title: "Graham Bell Award 2025,Best R&D Award 2025."
+//     }
+//   ];
+
+//   return (
+//     <div id="News">
+//       <div className="main">
+//         <h1>The Rise of Electric Vehicles: Navigating the Road to an Electric Future</h1>
+
+//         <div className="headlines-container">
+//           <h2>Headlines</h2>
+
+//           <div className="headlines-grid">
+//             {headlinesData.map((headline) => (
+//               <div key={headline.id} className={`headline-card ${headline.className}`}>
+//                 {headline.id === 1 && showVideo ? (
+//                   <iframe
+//                     width="100%"
+//                     height="315"
+//                     src={headline.videoUrl}
+//                     title="YouTube video player"
+//                     frameBorder="0"
+//                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//                     allowFullScreen
+//                   ></iframe>
+//                 ) : (
+//                   <img
+//                     src={headline.image}
+//                     alt={headline.title}
+//                     onClick={() => headline.id === 1 && setShowVideo(true)}
+//                     style={{ cursor: headline.id === 1 ? 'pointer' : 'default' }}
+//                   />
+//                 )}
+//                 <div className="headline-overlay"></div>
+//                 <p>{headline.title}</p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="other-news">
+//         {otherNewsData.map((news, index) => (
+//           <React.Fragment key={news.id}>
+//             {index > 0 && <div className="divider"></div>}
+//             <p>{news.title}</p>
+//           </React.Fragment>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default News;
+
+//for mobile 
+
 import React, { useState } from 'react';
 import './../style.scss';
 
@@ -394,7 +506,7 @@ const News = () => {
       id: 1,
       title: "Team Dash Dynamic Presented their live wireless charging at Bharat Mobility Global Expo 2025.",
       videoUrl: "https://www.youtube.com/embed/9IAJVcNzjc8?si=5eDMN3gr835XGIVI",
-      image: "https://img.youtube.com/vi/9IAJVcNzjc8/maxresdefault.jpg", // YouTube thumbnail
+      image: "https://img.youtube.com/vi/9IAJVcNzjc8/maxresdefault.jpg",
       className: "large-headline"
     },
     {
@@ -438,7 +550,7 @@ const News = () => {
     },
     {
       id: 4,
-      title: "Graham Bell Award 2025,Best R&D Award 2025."
+      title: "Graham Bell Award 2025, Best R&D Award 2025."
     }
   ];
 
@@ -449,14 +561,11 @@ const News = () => {
 
         <div className="headlines-container">
           <h2>Headlines</h2>
-
           <div className="headlines-grid">
             {headlinesData.map((headline) => (
               <div key={headline.id} className={`headline-card ${headline.className}`}>
                 {headline.id === 1 && showVideo ? (
                   <iframe
-                    width="100%"
-                    height="315"
                     src={headline.videoUrl}
                     title="YouTube video player"
                     frameBorder="0"
@@ -492,3 +601,4 @@ const News = () => {
 };
 
 export default News;
+
