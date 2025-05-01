@@ -350,7 +350,7 @@ export default function Nav() {
           <a onClick={(e) => e.preventDefault()}>
             <Space>
               <Link className={`a7 ${red_btn === 7 ? "red" : ""}`}>
-                <li className="nav_elements">News Room</li>
+                <li className="nav_elements">News Gallery</li>
               </Link>
 
               {/* <DownOutlined /> */}
