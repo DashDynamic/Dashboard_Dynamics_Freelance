@@ -68,31 +68,52 @@ const NewsGallery = () => {
   );
 
   return (
-    <div className="w-full">
-      {/* Header */}
+    // <div className="w-full">
+    //   {/* Header */}
+    //   <div
+    //     className="w-full bg-cover bg-center flex items-center justify-center relative"
+    //     style={{
+    //       backgroundImage: "url('/assets/news/bg.png')",
+    //       backgroundPosition: "210px 110px",
+    //       backgroundSize: "1440px 250px",
+    //       paddingTop: "12rem",
+    //       paddingBottom: "8rem",
+    //     }}
+    //   >
+    //     <div
+    //       className="absolute overflow-auto text-white font-bold text-5xl"
+    //       style={{
+    //         left: "771px",
+    //         top: "199px",
+    //         width: "498.56px",
+    //         height: "80.83px",
+    //         lineHeight: "1.2",
+    //       }}
+    //     >
+    //       News Gallery
+    //     </div>
+    //   </div>
+
+          <div className="w-full overflow-hidden">
+    {/* Header */}
+    <div
+      className="w-full bg-cover bg-center flex items-center justify-center relative"
+      style={{
+        backgroundImage: "url('assets/news/bg.png')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      {/* Centered Content */}
       <div
-        className="w-full bg-cover bg-center flex items-center justify-center relative"
-        style={{
-          backgroundImage: "url('/assets/news/bg.png')",
-          backgroundPosition: "210px 110px",
-          backgroundSize: "1440px 250px",
-          paddingTop: "12rem",
-          paddingBottom: "8rem",
-        }}
+        className="relative z-10 text-white text-center w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-16"
+        style={{ paddingTop: "12rem", paddingBottom: "8rem" }}
       >
-        <div
-          className="absolute overflow-auto text-white font-bold text-5xl"
-          style={{
-            left: "771px",
-            top: "199px",
-            width: "498.56px",
-            height: "80.83px",
-            lineHeight: "1.2",
-          }}
-        >
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
           News Gallery
-        </div>
+        </h1>
       </div>
+    </div>
 
       {/* Grid Rows */}
       <div className="max-w-6xl mx-auto py-8 px-4">
