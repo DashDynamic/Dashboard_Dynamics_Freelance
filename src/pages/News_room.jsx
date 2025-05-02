@@ -14,7 +14,7 @@
 //   //   { id: 8, src: '/assets/news/8.png', alt: 'News image 8', caption: 'DMRC Visits Our Office!' },
 //   //   { id: 9, src: '/assets/news/9.png', alt: 'News image 9', caption: 'Happy Engineers Day from Dash Dynamic Pvt Ltd!' },
 //   //   { id: 10, src: '/assets/news/10.png', alt: 'News image 10', caption: 'Honored to host the Vice Chancellor and Deputy Vice Chancellor of the The University Of Zambia (UNZA)' },
-//   //   { id: 11, src: '/assets/news/11.png', alt: 'News image 11', caption: 'Visit from Ashhok Kapoor, Minister of the Economic Council of India and Co-Founder & Managing Director of EzUrja Group.' },
+//   //   { id: 11, src: '/assets/news/11.png', alt: 'News image 11', caption: 'Visit of Ashhok Kapoor,  PR & Journalist, Ex-FSSAI-CAC member.' },
 //   //   { id: 12, src: '/assets/news/12.png', alt: 'News image 12', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors.' },
 //   //   { id: 13, src: '/assets/news/13.png', alt: 'News image 13', caption: 'Present our technology at the Power Gen India event 2024, at Yash Bhoomi, IICC Dwarka.' },
 //   //   { id: 14, src: '/assets/news/14.png', alt: 'News image 14', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors Event in Pune' },
