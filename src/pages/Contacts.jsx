@@ -205,7 +205,8 @@ export default function Contacts() {
       </Landing>
       <div className="contact_inner">
         <div className="contact_head">
-        <button
+
+    <button
   onClick={() => window.location.href = 'https://wa.me/918303429563?text=Hello%2C%20I%20need%20more%20information%20about%20your%20product.'}
 >
   <span className="inline-flex items-center">
@@ -217,8 +218,6 @@ export default function Contacts() {
     />
   </span>
 </button>
-
-
 
 
           <p>
