@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import AutoScrollSlider from '../components/AutoScrollSlider';
 import {
   motion,
   useInView,
@@ -168,6 +169,7 @@ export default function Home() {
   return (
     <div id="Home">
       <HomeLanding />
+      <AutoScrollSlider />
 
       <div ref={techRef} className="tech">
         <div className="left">
