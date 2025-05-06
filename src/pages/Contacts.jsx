@@ -205,7 +205,22 @@ export default function Contacts() {
       </Landing>
       <div className="contact_inner">
         <div className="contact_head">
-          <button>CONTACT US</button>
+        <button
+  onClick={() => window.location.href = 'https://wa.me/918303429563?text=Hello%2C%20I%20need%20more%20information%20about%20your%20product.'}
+>
+  <span className="inline-flex items-center">
+    Connect with us on
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+      className="w-5 h-5 ml-1.5"
+    />
+  </span>
+</button>
+
+
+
+
           <p>
             Dash is leading the way to a more sustainable future with a Charging
             as a Service business model and “invisible” charging infrastructure
@@ -215,7 +230,8 @@ export default function Contacts() {
         <div className="lets_Talk">
           <div className="contact">
             <h1 className="main">LET'S TALK</h1>
-            <h1>Contact us for further information</h1>
+            <h1>Contact us for further information
+            +91 83034 29563</h1>
             {!mobile && <br />}
             {!mobile && <br />}
             {!mobile && <br />}
