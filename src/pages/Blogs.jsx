@@ -174,36 +174,36 @@ const blogPosts = [
     category: "Market Insights",
     readTime: "6 min read"
   },
+  // {
+  //   id: 3,
+  //   title: "Wireless EVs leading the way to a pollution-free transportation",
+  //   date: "Monday, Jan 8, 2024",
+  //   author: "Ajeet Prabhakar",
+  //   company: "Dash Dynamic",
+  //   category: "Wireless Charging",
+  //   readTime: "8 min read"
+  // },
+  // {
+  //   id: 4,
+  //   title: "Wireless EVs leading the way to a pollution-free transportation",
+  //   date: "Monday, Jan 1, 2024",
+  //   author: "Ajeet Prabhakar",
+  //   company: "Dash Dynamic",
+  
+  //   category: "Wireless Charging",
+  //   readTime: "8 min read"
+  // },
+  // {
+  //   id: 5,
+  //   title: "Wireless EVs leading the way to a pollution-free transportation",
+  //   date: "Monday, Dec 25, 2023",
+  //   author: "Ajeet Prabhakar",
+  //   company: "Dash Dynamic",
+  //   category: "Wireless Charging",
+  //   readTime: "8 min read"
+  // },
   {
     id: 3,
-    title: "Wireless EVs leading the way to a pollution-free transportation",
-    date: "Monday, Jan 8, 2024",
-    author: "Ajeet Prabhakar",
-    company: "Dash Dynamic",
-    category: "Wireless Charging",
-    readTime: "8 min read"
-  },
-  {
-    id: 4,
-    title: "Wireless EVs leading the way to a pollution-free transportation",
-    date: "Monday, Jan 1, 2024",
-    author: "Ajeet Prabhakar",
-    company: "Dash Dynamic",
-  
-    category: "Wireless Charging",
-    readTime: "8 min read"
-  },
-  {
-    id: 5,
-    title: "Wireless EVs leading the way to a pollution-free transportation",
-    date: "Monday, Dec 25, 2023",
-    author: "Ajeet Prabhakar",
-    company: "Dash Dynamic",
-    category: "Wireless Charging",
-    readTime: "8 min read"
-  },
-  {
-    id: 6,
     title: "The Future of Urban Mobility",
     date: "Monday, Dec 18, 2023",
     author: "Ajeet Prabhakar",
