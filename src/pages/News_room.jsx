@@ -1,494 +1,322 @@
-// import React, { useState, useEffect } from "react";
-
-// export default function NewsRoom() {
-//   const [isLoading, setIsLoading] = useState(true);
-//   const [unavailabe, setUnavailable] = useState(false);
-//   const [Jobs, setJobs] = useState(null);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(
-//           "https://dashdynamicbackend.onrender.com/news"
-//         ); // Replace with your API endpoint
-//         const jsonData = await response.json();
-//         setJobs(jsonData);
-//         setIsLoading(false);
-//         console.log(jsonData);
-//       } catch (error) {
-//         console.log("Error:", error);
-//         setUnavailable(true);
-//       }
-//     };
-
-//     fetchData();
-//   }, []);
-
-//   if (unavailabe) {
-//     return (
-//       <div className="Loading_pg">
-//         <h1>Unable to load content</h1>
-//       </div>
-//     ); // Display loader while fetching data
-//   }
-
-//   if (isLoading) {
-//     return (
-//       <div className="Loading_pg">
-//         {/* <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0" y="0"
-//   viewBox="0 0 160 100" enableBackground="new 0 0 0 0" xmlSpace="preserve">
-//   <circle fill="#000" stroke="none" cx="60" cy="50" r="8">
-//     <animateTransform
-//       attributeName="transform"
-//       dur="1s"
-//       type="translate"
-//       values="0 15 ; 0 -15; 0 15"
-//       repeatCount="indefinite"
-//       begin="0.1s"/>
-//   </circle>
-//   <circle fill="#000" stroke="none" cx="100" cy="50" r="8">
-//     <animateTransform
-//       attributeName="transform"
-//       dur="1s"
-//       type="translate"
-//       values="0 10 ; 0 -10; 0 10"
-//       repeatCount="indefinite"
-//       begin="0.2s"/>
-//   </circle>
-// </svg> */}
-//  {/* added title in frame by jayam */}
-//         <iframe
-//     src="https://giphy.com/embed/9U100arhSkONMI6zo0"
-//     width="480"
-//     height="360"
-//     frameBorder="0"
-//     class="giphy-embed"
-//     allowFullScreen
-//     title="Funny GIF of a Cat Jumping"
-//         ></iframe>
-//       </div> // Display loader while fetching data
-//     );
-//   }
-
-//   return (
-//     <div id="News">
-//       <div className="main">
-//         <h1>
-//           The Rise of Electric Vehicles: Navigating the Road to an Electric
-//           Future
-//         </h1>
-//         <div className="tiles">
-//           <h1>Headlines</h1>
-//           <div className="row-1">
-//             <div className="b1 b">
-//               <div className="bg" />
-//               <img src={Jobs.team[0].urlToImage} alt="" />
-//               <h1>{Jobs.team[0].title}</h1>
-//             </div>
-//             <div className="b2 b">
-//               <div className="bg" />
-//               <img src={Jobs.team[1].urlToImage} alt="" />
-//               <h1>{Jobs.team[1].title}</h1>
-//             </div>
-//           </div>
-//           <div className="row-2">
-//             <div className="b1 b">
-//               <div className="bg" />
-//               <img src={Jobs.team[2].urlToImage} alt="" />
-//               <h1>{Jobs.team[2].title}</h1>
-//             </div>
-//             <div className="b2 b">
-//               <img src={Jobs.team[3].urlToImage} alt="" />
-//               <div className="bg" />
-//               <h1>{Jobs.team[3].title}</h1>
-//             </div>
-//             <div className="b3 b">
-//               <div className="bg" />
-//               <img src={Jobs.team[4].urlToImage} alt="" />
-//               <h1>{Jobs.team[4].title}</h1>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="other_news">
-//         <p>{Jobs.team[5].title}</p>
-//         <div className="line" />
-//         <p>{Jobs.team[6].title}</p>
-//         <div className="line" />
-//         <p>{Jobs.team[7].title}</p>
-//         <div className="line" />
-//         <p>{Jobs.team[8].title}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-// import React from 'react';
-// import './../style.scss';
-
-// const News = () => {
-//   const newsData = [
-//     {
-//       id: 1,
-//       title: "Best R&D Award at The INDIA EV SHOW 2024",
-//       image: "/image/image.png",
-//       body: 'Our team was honored with the Best R&D Award at the India EV Show 2024 for innovative electric vehicle solutions.',// If image is in public/images/
-//     },
-//     {
-//       id: 2,
-//       title: "Battery Technology: What's Next?",
-//       image: 'https://via.placeholder.com/150',
-//     },
-//     {
-//       id: 3,
-//       title: 'Government Policies Driving EV Adoption',
-//       image: 'https://via.placeholder.com/150',
-//     },
-//     {
-//       id: 4,
-//       title: 'The Economics of Going Electric',
-//       image: 'https://via.placeholder.com/150',
-//     },
-//     {
-//       id: 5,
-//       title: 'Top 10 EVs to Watch in 2024',
-//       image: 'https://via.placeholder.com/150',
-//     },
-//   ];
-
-//   return (
-//     <div id="News">
-//       <div className="main">
-//         <h1>The Rise of Electric Vehicles: Navigating the Road to an Electric Future</h1>
-//       </div>
-//       <div className="tiles">
-//         <h1>Headlines</h1>
-//         <div className="row-1">
-//           {newsData.slice(0, 2).map((news) => (
-//             <div className="news-tile" key={news.id}>
-//               <img src={news.image} alt={news.title} />
-//               <h1>{news.title}</h1>
-//               <p>{news.body}</p>
-//             </div>
-//           ))}
-//         </div>
-//         <div className="row-2">
-//           {newsData.slice(2).map((news) => (
-//             <div className="news-tile" key={news.id}>
-//               <img src={news.image} alt={news.title} />
-//               <h1>{news.title}</h1>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default News;
-
-// import React from 'react';
-// import './../style.scss';
-
-
-// const News = () => {
-//   const headlinesData = [
-//     {
-//       id: 1,
-//       title: "Team Dash Dynamic Presented their live wireless charging at Bharat Mobility Global Expo 2025.",
-//       image: "https://img.youtube.com/vi/9IAJVcNzjc8/maxresdefault.jpg", // YouTube video thumbnail
-//       video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/9IAJVcNzjc8?si=5eDMN3gr835XGIVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-//       className: "large-headline"
-//     },
-//     {
-//       id: 2,
-//       title: "Graham Bell Award 2025.",
-//       image: "/assets/news/2.jpg", // Update with your actual image path
-//       className: "medium-headline"
-//     },
-//     {
-//       id: 3,
-//       title: "Exciting visit from Hyundai Corporation Team!",
-//       image: "/assets/news/3.jpg", // Update with your actual image path
-//       className: "small-headline"
-//     },
-//     {
-//       id: 4,
-//       title: "DMRC Visits Our Office!",
-//       image: "/assets/news/4.jpg", // Update with your actual image path
-//       className: "small-headline"
-//     },
-//     {
-//       id: 5,
-//       title: "Tech Talk with Robin Singh",
-//       image: "/assets/news/5.jpg", // Update with your actual image path
-//       className: "small-headline"
-//     }
-//   ];
-
-//   const otherNewsData = [
-//     {
-//       id: 1,
-//       title: "This year, it could be a million e-bikes fame"
-//     },
-//     {
-//       id: 2,
-//       title: "Electric cab aggregators on expansion, hiring spree"
-//     },
-//     {
-//       id: 3,
-//       title: "Audi to launch electric SUV Q8 e-tron in India in August"
-//     },
-//     {
-//       id: 4,
-//       title: "Audi to launch electric SUV Q8 e-tron in India in August"
-//     }
-//   ];
-
-//   return (
-//     <div id="News">
-//       <div className="main">
-//         <h1>The Rise of Electric Vehicles: Navigating the Road to an Electric Future</h1>
-        
-//         <div className="headlines-container">
-//           <h2>Headlines</h2>
-          
-//           <div className="headlines-grid">
-//             {headlinesData.map((headline) => (
-//               <div key={headline.id} className={`headline-card ${headline.className}`}>
-//                 <img src={headline.image} alt={headline.title} />
-//                 <div className="headline-overlay"></div>
-//                 <p>{headline.title}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-      
-//       <div className="other-news">
-//         {otherNewsData.map((news, index) => (
-//           <React.Fragment key={news.id}>
-//             {index > 0 && <div className="divider"></div>}
-//             <p>{news.title}</p>
-//           </React.Fragment>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default News;
-
-//onclick video
-
 // import React, { useState } from 'react';
-// import './../style.scss';
 
-// const News = () => {
-//   const [showVideo, setShowVideo] = useState(false);
+// const NewsGallery = () => {
+//   const [selectedImage, setSelectedImage] = useState(null);
 
-//   const headlinesData = [
-//     {
-//       id: 1,
-//       title: "Team Dash Dynamic Presented their live wireless charging at Bharat Mobility Global Expo 2025.",
-//       // image: "https://img.youtube.com/vi/9IAJVcNzjc8/maxresdefault.jpg", // YouTube video thumbnail
-//       video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/9IAJVcNzjc8?si=5eDMN3gr835XGIVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-//       className: "large-headline"
-//     },
-//     {
-//       id: 2,
-//       title: "Graham Bell Award 2025.",
-//       image: "/assets/news/2.jpg",
-//       className: "medium-headline"
-//     },
-//     {
-//       id: 3,
-//       title: "Exciting visit from Hyundai Corporation Team!",
-//       image: "/assets/news/3.jpg",
-//       className: "small-headline"
-//     },
-//     {
-//       id: 4,
-//       title: "DMRC Visits Our Office!",
-//       image: "/assets/news/4.jpg",
-//       className: "small-headline"
-//     },
-//     {
-//       id: 5,
-//       title: "Tech Talk with Robin Singh",
-//       image: "/assets/news/5.jpg",
-//       className: "small-headline"
-//     }
+//   // const newsImages = [
+//   //   { id: 1, src: '/assets/news/1.png', alt: 'News image 1', caption: 'Startup Samvad at Research & Innovation Park, IIT Delhi' },
+//   //   { id: 2, src: '/assets/news/2.png', alt: 'News image 2', caption: 'Winner of the Grand Challenge Series in the E-Mobility Charging Services sector' },
+//   //   { id: 3, src: '/assets/news/3.png', alt: 'News image 3', caption: 'Startup Mahakumbh Expo 2025' },
+//   //   { id: 4, src: '/assets/news/4.png', alt: 'News image 4', caption: 'Convergence India Expo and 10th Smart Cities India Expo at Bharat Mandapam, New Delhi!' },
+//   //   { id: 5, src: '/assets/news/5.png', alt: 'News image 5', caption: 'Bharat Mobility Global Expo 2025' },
+//   //   { id: 6, src: '/assets/news/6.png', alt: 'News image 6', caption: 'Graham Bell Award 2025' },
+//   //   { id: 7, src: '/assets/news/7.png', alt: 'News image 7', caption: 'Hyundai Corporation, representing both Korea and India at Dash for collaboration.' },
+//   //   { id: 8, src: '/assets/news/8.png', alt: 'News image 8', caption: 'DMRC Visits Our Office!' },
+//   //   { id: 9, src: '/assets/news/9.png', alt: 'News image 9', caption: 'Happy Engineers Day from Dash Dynamic Pvt Ltd!' },
+//   //   { id: 10, src: '/assets/news/10.png', alt: 'News image 10', caption: 'Honored to host the Vice Chancellor and Deputy Vice Chancellor of the The University Of Zambia (UNZA)' },
+//   //   { id: 11, src: '/assets/news/11.png', alt: 'News image 11', caption: 'Visit of Ashhok Kapoor,  PR & Journalist, Ex-FSSAI-CAC member.' },
+//   //   { id: 12, src: '/assets/news/12.png', alt: 'News image 12', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors.' },
+//   //   { id: 13, src: '/assets/news/13.png', alt: 'News image 13', caption: 'Present our technology at the Power Gen India event 2024, at Yash Bhoomi, IICC Dwarka.' },
+//   //   { id: 14, src: '/assets/news/14.png', alt: 'News image 14', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors Event in Pune' },
+//   //   { id: 15, src: '/assets/news/15.png', alt: 'News image 15', caption: 'Showcase our cutting-edge wireless charging technology at the Vikshit Bharat exhibition, organized by the PHD Chamber of Commerce.' },
+//   //   { id: 16, src: '/assets/news/16.png', alt: 'News image 16', caption: 'Showcase our cutting-edge technology at the Annual Day of DST NIDHI, R7I Park, IIT Delhi.' },
+//   //   { id: 17, src: '/assets/news/17.png', alt: 'News image 17', caption: 'IAS Officers Explore Innovation at Dash Dynamic Pvt. Ltd.' },
+//   //   { id: 18, src: '/assets/news/18.png', alt: 'News image 18', caption: 'Dash Dynamic has been awarded the prestigious Best R&D Award at The INDIA EV SHOWs 4th edition, held in Chennai and organized by Citroen.' },
+//   //   { id: 19, src: '/assets/news/19.png', alt: 'News image 19', caption: 'German Defense Minister Boris Pistorius' },
+//   //   { id: 20, src: '/assets/news/20.png', alt: 'News image 20', caption: 'Presenting to British members of Parliament.' },
+//   //   { id: 21, src: '/assets/news/21.png', alt: 'News image 21', caption: 'Visit by Russian delegates.' },
+//   //   { id: 22, src: '/assets/news/22.png', alt: 'News image 22', caption: 'Visitors from Department science and technology members.' },
+//   //   { id: 23, src: '/assets/news/23.png', alt: 'News image 23', caption: 'Convergence Expo at Pragati maidan 2023' },
+//   //   { id: 24, src: '/assets/news/24.png', alt: 'News image 24', caption: 'Demonstrate our tech to Mr. James Cleverly, British Foreign Secretary, Commonwealth and Development Affairs' },
+//   //   { id: 25, src: '/assets/news/25.png', alt: 'News image 25', caption: 'Pitching at Taj, Dubai 2024.' },
+//   //   { id: 26, src: '/assets/news/26.png', alt: 'News image 26', caption: 'Showcasing our wireless charging technology at Atmanir Bharbharat Expo 2024.' },
+//   //   { id: 27, src: '/assets/news/27.png', alt: 'News image 27', caption: 'Visit by British members of Parliament' },
+//   //   { id: 28, src: '/assets/news/28.png', alt: 'News image 28', caption: 'Visit by British members of Parliament' },
+
+//   //   { id: 29, src: '/assets/news/29.jpg', alt: 'News image 29', caption: 'Showing tech to international students.' },
+//   //   { id: 30, src: '/assets/news/30.jpg', alt: 'News image 30', caption: 'Visit by British members of Parliament' },
+//   //   { id: 31, src: '/assets/news/31.jpg', alt: 'News image 31', caption: 'Showing to H.E. Abdulla Bin Touq Al Marri, Minister of Economy, United Arab Emirates' },
+//   //   { id: 32, src: '/assets/news/32.jpg', alt: 'News image 32', caption: 'Pitching at LetsIgnite2023, Bangalore.' },
+//   //   { id: 33, src: '/assets/news/33.jpg', alt: 'News image 33', caption: 'Presenting tech to Lindsey Ford, Deputy Ass. Secretary of Defense on Southeast Asia.' },
+//   //   { id: 34, src: '/assets/news/34.jpg', alt: 'News image 34', caption: 'Showcasing our work to the esteemed delegate, Mrs Raquel Pena de Antuna (Vice President of the Dominican Republic)' },
+//   // ];
+
+// const newsImages = [
+//     { id: 1, src: '/assets/news/1.png', alt: 'News image 1', caption: 'Startup Samvad at Research & Innovation Park, IIT Delhi', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_startupsamvad-iitdelhi-fitt-activity-7323582384249982976-RJc2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 2, src: '/assets/news/2.png', alt: 'News image 2', caption: 'Winner of the Grand Challenge Series in the E-Mobility Charging Services sector', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_dashdynamic-grandchallengeseries-emobility-activity-7314995257249579009-QlnA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 3, src: '/assets/news/3.png', alt: 'News image 3', caption: 'Startup Mahakumbh Expo 2025', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_startupmahakumbh-innovation-entrepreneurship-activity-7314912306054799361-44Yh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 4, src: '/assets/news/4.png', alt: 'News image 4', caption: 'Convergence India Expo and 10th Smart Cities India Expo at Bharat Mandapam, New Delhi!', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_dashdynamic-innovationinev-evrevolution-activity-7310640475802071040-lNDY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 5, src: '/assets/news/5.png', alt: 'News image 5', caption: 'Bharat Mobility Global Expo 2025', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_bharatmobilityexpo-globalmobility-futureoftransport-activity-7288247229818052611-1Gzw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 6, src: '/assets/news/6.png', alt: 'News image 6', caption: 'Graham Bell Award 2025', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_congratulations-to-dash-dynamic-pvt-ltd-finalist-activity-7299032372237254656-ahO4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 7, src: '/assets/news/7.png', alt: 'News image 7', caption: 'Hyundai Corporation, representing both Korea and India at Dash for collaboration.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_evcharging-wirelesscharging-electricvehicles-activity-7271052285747560448-m3d2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 8, src: '/assets/news/8.png', alt: 'News image 8', caption: 'DMRC Visits Our Office!', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_urbanmobility-innovation-dmrc-activity-7267854928100888576-KDoS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 9, src: '/assets/news/9.png', alt: 'News image 9', caption: 'Happy Engineers Day from Dash Dynamic Pvt Ltd!', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_happy-engineers-day-from-dash-dynamic-pvt-activity-7240984050054656000-TzjK?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 10, src: '/assets/news/10.png', alt: 'News image 10', caption: 'Honored to host the Vice Chancellor and Deputy Vice Chancellor of the The University Of Zambia (UNZA)', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_innovation-technology-highereducation-activity-7266785007292018688-zjuR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 11, src: '/assets/news/11.png', alt: 'News image 11', caption: 'Visit from Ashhok Kapoor, Co-Founder & Managing Director of EzUrja Group.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_industryleadership-dashdynamic-ezurjagroup-activity-7254760381288480769-pk-M?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 12, src: '/assets/news/12.png', alt: 'News image 12', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_dashdynamic-evcharging-wirelesscharging-activity-7246836703875776512-7ckl?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 13, src: '/assets/news/13.png', alt: 'News image 13', caption: 'Present our technology at the Power Gen India event 2024, at Yash Bhoomi, IICC Dwarka.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_powergenindia-startupindia-innovation-activity-7238066637277405185-XM4A?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 14, src: '/assets/news/14.png', alt: 'News image 14', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors Event in Pune', link: '/post/14' },
+//     { id: 15, src: '/assets/news/15.png', alt: 'News image 15', caption: 'Showcase our cutting-edge wireless charging technology at the Vikshit Bharat exhibition, organized by the PHD Chamber of Commerce.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_electricvehicles-wirelesscharging-innovation-activity-7244604281973043200-fZKu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 16, src: '/assets/news/16.png', alt: 'News image 16', caption: 'Showcase our cutting-edge technology at the Annual Day of DST NIDHI, R7I Park, IIT Delhi.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_innovation-techshowcase-wirelesscharging-activity-7238063430379659264-sKrh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 17, src: '/assets/news/17.png', alt: 'News image 17', caption: 'IAS Officers Explore Innovation at Dash Dynamic Pvt. Ltd.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_uttarpradesh-chhattisgarh-assam-activity-7209183752399331328-sH1k?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 18, src: '/assets/news/18.png', alt: 'News image 18', caption: 'Dash Dynamic has been awarded the prestigious Best R&D Award at The INDIA EV SHOWs 4th edition, held in Chennai and organized by Citroen.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_indiaevshow-bestrdaward-dynamiccharging-activity-7215252478735343616-i1M2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+//     { id: 19, src: '/assets/news/19.png', alt: 'News image 19', caption: 'German Defense Minister Boris Pistorius', link: '/post/19' },
+//     { id: 20, src: '/assets/news/20.png', alt: 'News image 20', caption: 'Presenting to British members of Parliament.', link: '/post/20' },
+//     { id: 21, src: '/assets/news/21.png', alt: 'News image 21', caption: 'Visit by Russian delegates.', link: '/post/21' },
+//     { id: 22, src: '/assets/news/22.png', alt: 'News image 22', caption: 'Visitors from Department science and technology members.', link: '/post/22' },
+//     { id: 23, src: '/assets/news/23.png', alt: 'News image 23', caption: 'Convergence Expo at Pragati maidan 2023', link: '/post/23' },
+//     { id: 24, src: '/assets/news/24.png', alt: 'News image 24', caption: 'Demonstrate our tech to Mr. James Cleverly, British Foreign Secretary, Commonwealth and Development Affairs', link: '/post/24' },
+//     { id: 25, src: '/assets/news/25.png', alt: 'News image 25', caption: 'Pitching at Taj, Dubai 2024.', link: '/post/25' },
+//     { id: 26, src: '/assets/news/26.png', alt: 'News image 26', caption: 'Showcasing our wireless charging technology at Atmanir Bharbharat Expo 2024.', link: '/post/26' },
+//     { id: 27, src: '/assets/news/27.png', alt: 'News image 27', caption: 'Visit by British members of Parliament', link: '/post/27' },
+//     { id: 28, src: '/assets/news/28.png', alt: 'News image 28', caption: 'Visit by British members of Parliament', link: '/post/28' },
+//     { id: 29, src: '/assets/news/29.jpg', alt: 'News image 29', caption: 'Showing tech to international students.', link: '/post/29' },
+//     { id: 30, src: '/assets/news/30.jpg', alt: 'News image 30', caption: 'Visit by British members of Parliament', link: '/post/30' },
+//     { id: 31, src: '/assets/news/31.jpg', alt: 'News image 31', caption: 'Showing to H.E. Abdulla Bin Touq Al Marri, Minister of Economy, United Arab Emirates', link: '/post/31' },
+//     { id: 32, src: '/assets/news/32.jpg', alt: 'News image 32', caption: 'Pitching at LetsIgnite2023, Bangalore.', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7173210005744046080/' },
+//     { id: 33, src: '/assets/news/33.jpg', alt: 'News image 33', caption: 'Presenting tech to Lindsey Ford, Deputy Ass. Secretary of Defense on Southeast Asia.', link: '/post/33' },
+//     { id: 34, src: '/assets/news/34.jpg', alt: 'News image 34', caption: 'Showcasing our work to the esteemed delegate, Mrs Raquel Pena de Antuna (Vice President of the Dominican Republic)', link: '/post/34' },
 //   ];
 
-//   const otherNewsData = [
-//     {
-//       id: 1,
-//       title: "This year, it could be a million e-bikes fame"
-//     },
-//     {
-//       id: 2,
-//       title: "Electric cab aggregators on expansion, hiring spree"
-//     },
-//     {
-//       id: 3,
-//       title: "Audi to launch electric SUV Q8 e-tron in India in August"
-//     },
-//     {
-//       id: 4,
-//       title: "Audi to launch electric SUV Q8 e-tron in India in August"
-//     }
-//   ];
+//   const openLightbox = (imageId) => {
+//     setSelectedImage(newsImages.find(img => img.id === imageId));
+//   };
+
+//   const closeLightbox = () => {
+//     setSelectedImage(null);
+//   };
+
+//   const ImageCard = ({ image, className }) => (
+//     <div
+//       className={`flex flex-col overflow-hidden rounded-[20px] cursor-pointer transition-all duration-300 ${className}`}
+//       onClick={() => openLightbox(image.id)}
+//     >
+//       <img
+//         src={image.src}
+//         alt={image.alt}
+//         className="w-full h-full object-cover rounded-[20px] flex-1"
+//       />
+//       {image.caption && (
+//         <div className="p-3 bg-white">
+//           <p className="text-sm text-gray-700">{image.caption}</p>
+//         </div>
+//       )}
+//     </div>
+//   );
 
 //   return (
-//     <div id="News">
-//       <div className="main">
-//         <h1>The Rise of Electric Vehicles: Navigating the Road to an Electric Future</h1>
+//     // <div className="w-full">
+//     //   {/* Header */}
+//     //   <div
+//     //     className="w-full bg-cover bg-center flex items-center justify-center relative"
+//     //     style={{
+//     //       backgroundImage: "url('/assets/news/bg.png')",
+//     //       backgroundPosition: "210px 110px",
+//     //       backgroundSize: "1440px 250px",
+//     //       paddingTop: "12rem",
+//     //       paddingBottom: "8rem",
+//     //     }}
+//     //   >
+//     //     <div
+//     //       className="absolute overflow-auto text-white font-bold text-5xl"
+//     //       style={{
+//     //         left: "771px",
+//     //         top: "199px",
+//     //         width: "498.56px",
+//     //         height: "80.83px",
+//     //         lineHeight: "1.2",
+//     //       }}
+//     //     >
+//     //       News Gallery
+//     //     </div>
+//     //   </div>
 
-//         <div className="headlines-container">
-//           <h2>Headlines</h2>
+//           <div className="w-full overflow-hidden">
+//     {/* Header */}
+//     <div
+//       className="w-full bg-cover bg-center flex items-center justify-center relative"
+//       style={{
+//         backgroundImage: "url('assets/news/bg.png')",
+//         backgroundPosition: "center",
+//         backgroundSize: "cover",
+//       }}
+//     >
+//       {/* Centered Content */}
+//       <div
+//         className="relative z-10 text-white text-center w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-16"
+//         style={{ paddingTop: "12rem", paddingBottom: "8rem" }}
+//       >
+//         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+//           News Gallery
+//         </h1>
+//       </div>
+//     </div>
 
-//           <div className="headlines-grid">
-//             {headlinesData.map((headline) => (
-//               <div key={headline.id} className={`headline-card ${headline.className}`}>
-//                 {headline.id === 1 && showVideo ? (
-//                   <div dangerouslySetInnerHTML={{ __html: headline.video }} />
-//                 ) : (
-//                   <img
-//                     src={headline.image}
-//                     alt={headline.title}
-//                     onClick={() => headline.id === 1 && setShowVideo(true)}
-//                     style={{ cursor: headline.id === 1 ? 'pointer' : 'default' }}
-//                   />
-//                 )}
-//                 <div className="headline-overlay"></div>
-//                 <p>{headline.title}</p>
-//               </div>
-//             ))}
+//       {/* Grid Rows */}
+//       <div className="max-w-6xl mx-auto py-8 px-4">
+//         {Array.from({ length: Math.ceil(newsImages.length / 2) }, (_, i) => {
+//           const first = newsImages[i * 2];
+//           const second = newsImages[i * 2 + 1];
+//           const isEvenRow = i % 2 === 0;
+
+//           return (
+//             <div key={i} className="flex flex-col md:flex-row gap-6 mb-12 items-stretch">
+//               {isEvenRow ? (
+//                 <>
+//                   {first && <ImageCard image={first} className="w-full md:w-1/3" />} 
+//                   {second && <ImageCard image={second} className="w-full md:w-2/3" />} 
+//                 </>
+//               ) : (
+//                 <>
+//                   {first && <ImageCard image={first} className="w-full md:w-2/3" />} 
+//                   {second && <ImageCard image={second} className="w-full md:w-1/3" />} 
+//                 </>
+//               )}
+//             </div>
+//           );
+//         })}
+//       </div>
+
+//       {/* Lightbox */}
+//       {selectedImage && (
+//         <div
+//           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+//           onClick={closeLightbox}
+//         >
+//           <div
+//             className="max-w-4xl w-full bg-white rounded-[20px] overflow-hidden"
+//             onClick={(e) => e.stopPropagation()}
+//           >
+//             <div className="relative">
+//               <img
+//                 src={selectedImage.src}
+//                 alt={selectedImage.alt}
+//                 className="w-full h-auto object-contain"
+//               />
+//               <button
+//                 onClick={closeLightbox}
+//                 className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center"
+//               >
+//                 ✕
+//               </button>
+//             </div>
+//             <div className="p-4 bg-white">
+//               <p className="text-gray-800">{selectedImage.caption}</p>
+//             </div>
 //           </div>
 //         </div>
-//       </div>
-
-//       <div className="other-news">
-//         {otherNewsData.map((news, index) => (
-//           <React.Fragment key={news.id}>
-//             {index > 0 && <div className="divider"></div>}
-//             <p>{news.title}</p>
-//           </React.Fragment>
-//         ))}
-//       </div>
+//       )}
 //     </div>
 //   );
 // };
 
-// export default News;
-import React, { useState } from 'react';
-import './../style.scss';
+// export default NewsGallery;
 
-const News = () => {
-  const [showVideo, setShowVideo] = useState(true);
+import React from 'react';
 
-  const headlinesData = [
-    {
-      id: 1,
-      title: "Team Dash Dynamic Presented their live wireless charging at Bharat Mobility Global Expo 2025.",
-      videoUrl: "https://www.youtube.com/embed/9IAJVcNzjc8?si=5eDMN3gr835XGIVI",
-      image: "https://img.youtube.com/vi/9IAJVcNzjc8/maxresdefault.jpg", // YouTube thumbnail
-      className: "large-headline"
-    },
-    {
-      id: 2,
-      title: "Graham Bell Award 2025.",
-      image: "/assets/news/2.jpg",
-      className: "medium-headline"
-    },
-    {
-      id: 3,
-      title: "Exciting visit from Hyundai Corporation Team!",
-      image: "/assets/news/3.jpg",
-      className: "small-headline"
-    },
-    {
-      id: 4,
-      title: "DMRC Visits Our Office!",
-      image: "/assets/news/4.jpg",
-      className: "small-headline"
-    },
-    {
-      id: 5,
-      title: "Tech Talk with Robin Singh",
-      image: "/assets/news/5.jpg",
-      className: "small-headline"
-    }
+const NewsGallery = () => {
+  // Array of news images with corresponding links and captions
+  const newsImages = [
+    { id: 1, src: '/assets/news/1.png', alt: 'News image 1', caption: 'Startup Samvad at Research & Innovation Park, IIT Delhi', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_startupsamvad-iitdelhi-fitt-activity-7323582384249982976-RJc2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 2, src: '/assets/news/2.png', alt: 'News image 2', caption: 'Winner of the Grand Challenge Series in the E-Mobility Charging Services sector', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_dashdynamic-grandchallengeseries-emobility-activity-7314995257249579009-QlnA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 3, src: '/assets/news/3.png', alt: 'News image 3', caption: 'Startup Mahakumbh Expo 2025', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_startupmahakumbh-innovation-entrepreneurship-activity-7314912306054799361-44Yh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 4, src: '/assets/news/4.png', alt: 'News image 4', caption: 'Convergence India Expo and 10th Smart Cities India Expo at Bharat Mandapam, New Delhi!', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_dashdynamic-innovationinev-evrevolution-activity-7310640475802071040-lNDY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 5, src: '/assets/news/5.png', alt: 'News image 5', caption: 'Bharat Mobility Global Expo 2025', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_bharatmobilityexpo-globalmobility-futureoftransport-activity-7288247229818052611-1Gzw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 6, src: '/assets/news/6.png', alt: 'News image 6', caption: 'Graham Bell Award 2025', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_congratulations-to-dash-dynamic-pvt-ltd-finalist-activity-7299032372237254656-ahO4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 7, src: '/assets/news/7.png', alt: 'News image 7', caption: 'Hyundai Corporation, representing both Korea and India at Dash for collaboration.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_evcharging-wirelesscharging-electricvehicles-activity-7271052285747560448-m3d2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 8, src: '/assets/news/8.png', alt: 'News image 8', caption: 'DMRC Visits Our Office!', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_urbanmobility-innovation-dmrc-activity-7267854928100888576-KDoS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 9, src: '/assets/news/9.png', alt: 'News image 9', caption: 'Happy Engineers Day from Dash Dynamic Pvt Ltd!', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_happy-engineers-day-from-dash-dynamic-pvt-activity-7240984050054656000-TzjK?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 10, src: '/assets/news/10.png', alt: 'News image 10', caption: 'Honored to host the Vice Chancellor and Deputy Vice Chancellor of the The University Of Zambia (UNZA)', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_innovation-technology-highereducation-activity-7266785007292018688-zjuR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 11, src: '/assets/news/11.png', alt: 'News image 11', caption: 'Visit from Ashhok Kapoor, Minister of the Economic Council of India and Co-Founder & Managing Director of EzUrja Group.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_industryleadership-dashdynamic-ezurjagroup-activity-7254760381288480769-pk-M?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 12, src: '/assets/news/12.png', alt: 'News image 12', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_dashdynamic-evcharging-wirelesscharging-activity-7246836703875776512-7ckl?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 13, src: '/assets/news/13.png', alt: 'News image 13', caption: 'Present our technology at the Power Gen India event 2024, at Yash Bhoomi, IICC Dwarka.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_powergenindia-startupindia-innovation-activity-7238066637277405185-XM4A?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 14, src: '/assets/news/14.png', alt: 'News image 14', caption: 'Dash Dynamic Showcased Innovative EV Wireless Charging Technology at Tata Motors Event in Pune', link: '/post/14' },
+    { id: 15, src: '/assets/news/15.png', alt: 'News image 15', caption: 'Showcase our cutting-edge wireless charging technology at the Vikshit Bharat exhibition, organized by the PHD Chamber of Commerce.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_electricvehicles-wirelesscharging-innovation-activity-7244604281973043200-fZKu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 16, src: '/assets/news/16.png', alt: 'News image 16', caption: 'Showcase our cutting-edge technology at the Annual Day of DST NIDHI, R7I Park, IIT Delhi.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_innovation-techshowcase-wirelesscharging-activity-7238063430379659264-sKrh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 17, src: '/assets/news/17.png', alt: 'News image 17', caption: 'IAS Officers Explore Innovation at Dash Dynamic Pvt. Ltd.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_uttarpradesh-chhattisgarh-assam-activity-7209183752399331328-sH1k?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 18, src: '/assets/news/18.png', alt: 'News image 18', caption: 'Dash Dynamic has been awarded the prestigious Best R&D Award at The INDIA EV SHOWs 4th edition, held in Chennai and organized by Citroen.', link: 'https://www.linkedin.com/posts/dash-dynamic-llp_indiaevshow-bestrdaward-dynamiccharging-activity-7215252478735343616-i1M2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaE9QEBD8hmjUjlJzfUP0wSXEm9VNkAfJ8' },
+    { id: 19, src: '/assets/news/19.png', alt: 'News image 19', caption: 'German Defense Minister Boris Pistorius', link: '/post/19' },
+    { id: 20, src: '/assets/news/20.png', alt: 'News image 20', caption: 'Presenting to British members of Parliament.', link: '/post/20' },
+    { id: 21, src: '/assets/news/21.png', alt: 'News image 21', caption: 'Visit by Russian delegates.', link: '/post/21' },
+    { id: 22, src: '/assets/news/22.png', alt: 'News image 22', caption: 'Visitors from Department science and technology members.', link: '/post/22' },
+    { id: 23, src: '/assets/news/23.png', alt: 'News image 23', caption: 'Convergence Expo at Pragati maidan 2023', link: '/post/23' },
+    { id: 24, src: '/assets/news/24.png', alt: 'News image 24', caption: 'Demonstrate our tech to Mr. James Cleverly, British Foreign Secretary, Commonwealth and Development Affairs', link: '/post/24' },
+    { id: 25, src: '/assets/news/25.png', alt: 'News image 25', caption: 'Pitching at Taj, Dubai 2024.', link: '/post/25' },
+    { id: 26, src: '/assets/news/26.png', alt: 'News image 26', caption: 'Showcasing our wireless charging technology at Atmanir Bharbharat Expo 2024.', link: '/post/26' },
+    { id: 27, src: '/assets/news/27.png', alt: 'News image 27', caption: 'Visit by British members of Parliament', link: '/post/27' },
+    { id: 28, src: '/assets/news/28.png', alt: 'News image 28', caption: 'Visit by British members of Parliament', link: '/post/28' },
+    { id: 29, src: '/assets/news/29.jpg', alt: 'News image 29', caption: 'Showing tech to international students.', link: '/post/29' },
+    { id: 30, src: '/assets/news/30.jpg', alt: 'News image 30', caption: 'Visit by British members of Parliament', link: '/post/30' },
+    { id: 31, src: '/assets/news/31.jpg', alt: 'News image 31', caption: 'Showing to H.E. Abdulla Bin Touq Al Marri, Minister of Economy, United Arab Emirates', link: '/post/31' },
+    { id: 32, src: '/assets/news/32.jpg', alt: 'News image 32', caption: 'Pitching at LetsIgnite2023, Bangalore.', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7173210005744046080/' },
+    { id: 33, src: '/assets/news/33.jpg', alt: 'News image 33', caption: 'Presenting tech to Lindsey Ford, Deputy Ass. Secretary of Defense on Southeast Asia.', link: '/post/33' },
+    { id: 34, src: '/assets/news/34.jpg', alt: 'News image 34', caption: 'Showcasing our work to the esteemed delegate, Mrs Raquel Pena de Antuna (Vice President of the Dominican Republic)', link: '/post/34' },
   ];
+  
 
-  const otherNewsData = [
-    {
-      id: 1,
-      title: "This year, it could be a million e-bikes fame"
-    },
-    {
-      id: 2,
-      title: "Electric cab aggregators on expansion, hiring spree"
-    },
-    {
-      id: 3,
-      title: "Audi to launch electric SUV Q8 e-tron in India in August"
-    },
-    {
-      id: 4,
-      title: "Audi to launch electric SUV Q8 e-tron in India in August"
-    }
-  ];
+  const ImageCard = ({ image, className }) => (
+    <div
+      className={`flex flex-col overflow-hidden rounded-[20px] cursor-pointer transition-all duration-300 ${className}`}
+      onClick={() => (window.location.href = image.link)}
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        className="w-full h-full object-cover rounded-[20px] flex-1"
+      />
+      {image.caption && (
+        <div className="p-3 bg-white">
+          <p className="text-sm text-gray-700">{image.caption}</p>
+        </div>
+      )}
+    </div>
+  );
 
   return (
-    <div id="News">
-      <div className="main">
-        <h1>The Rise of Electric Vehicles: Navigating the Road to an Electric Future</h1>
-
-        <div className="headlines-container">
-          <h2>Headlines</h2>
-
-          <div className="headlines-grid">
-            {headlinesData.map((headline) => (
-              <div key={headline.id} className={`headline-card ${headline.className}`}>
-                {headline.id === 1 && showVideo ? (
-                  <iframe
-                    width="100%"
-                    height="315"
-                    src={headline.videoUrl}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                ) : (
-                  <img
-                    src={headline.image}
-                    alt={headline.title}
-                    onClick={() => headline.id === 1 && setShowVideo(true)}
-                    style={{ cursor: headline.id === 1 ? 'pointer' : 'default' }}
-                  />
-                )}
-                <div className="headline-overlay"></div>
-                <p>{headline.title}</p>
-              </div>
-            ))}
-          </div>
+    <div className="w-full overflow-hidden">
+      {/* Header */}
+      <div
+        className="w-full bg-cover bg-center flex items-center justify-center relative"
+        style={{
+          backgroundImage: "url('assets/news/bg.png')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <div
+          className="relative z-10 text-white text-center w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-16"
+          style={{ paddingTop: "12rem", paddingBottom: "8rem" }}
+        >
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">News Gallery</h1>
         </div>
       </div>
 
-      <div className="other-news">
-        {otherNewsData.map((news, index) => (
-          <React.Fragment key={news.id}>
-            {index > 0 && <div className="divider"></div>}
-            <p>{news.title}</p>
-          </React.Fragment>
-        ))}
+      {/* Grid Rows */}
+      <div className="max-w-6xl mx-auto py-8 px-4">
+        {Array.from({ length: Math.ceil(newsImages.length / 2) }, (_, i) => {
+          const first = newsImages[i * 2];
+          const second = newsImages[i * 2 + 1];
+          const isEvenRow = i % 2 === 0;
+
+          return (
+            <div key={i} className="flex flex-col md:flex-row gap-6 mb-12 items-stretch">
+              {isEvenRow ? (
+                <>
+                  {first && <ImageCard image={first} className="w-full md:w-1/3" />}
+                  {second && <ImageCard image={second} className="w-full md:w-2/3" />}
+                </>
+              ) : (
+                <>
+                  {first && <ImageCard image={first} className="w-full md:w-2/3" />}
+                  {second && <ImageCard image={second} className="w-full md:w-1/3" />}
+                </>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export default News;
+export default NewsGallery;
