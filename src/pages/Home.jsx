@@ -953,7 +953,14 @@ export default function Home() {
               <span>GO WIRELESS</span>WITH OUR TECH
             </h1>
           </motion.div>
-          <button>Dive In</button>
+          <a
+  href="https://www.youtube.com/channel/UCsRKV-fRVJHsw-swONENpAg"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button>Dive In</button>
+</a>
+
         </div>
 
         <YoutubeEmbed
@@ -1002,7 +1009,9 @@ export default function Home() {
               <span>OUR PRODUCTS</span>
             </h1>
           </motion.div>
-          <button>Explore</button>
+          <Link to="/Products">
+  <button>Explore</button>
+</Link>
         </div>
         {mobile ? (
           <img src="../assets/Home/homw_prod_mobile.png" alt="" />
