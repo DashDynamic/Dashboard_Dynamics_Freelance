@@ -472,26 +472,35 @@
 //     </div>
 //   );
 // }
-import { useEffect } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers at Dash Dynamic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .workable-embed {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
 
-export default function CareersPage() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.workable.com/dash-dynamic-private-limited/widgets.js';
-    script.async = true;
-    document.body.appendChild(script);
+  <h1>Join Our Team at Dash Dynamic Private Limited</h1>
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []); // Empty dependency array means it runs only on mount/unmount
+  <!-- Workable Job Widget Embed -->
+  <div class="workable-embed" data-widget="jobs"></div>
+  
+  <script src="https://apply.workable.com/dash-dynamic-private-limited/widgets.js"></script>
 
-  return (
-    <main className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
-        Join Our Team
-      </h1>
-      <div className="workable-embed" data-widget="jobs"></div>
-    </main>
-  );
-}
+</body>
+</html>
