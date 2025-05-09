@@ -1009,7 +1009,7 @@ export default function Home() {
               <span>OUR PRODUCTS</span>
             </h1>
           </motion.div>
-          <Link to="/about">
+          <Link to="/Products">
   <button>Explore</button>
 </Link>
         </div>
