@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import AutoScrollSlider from '../components/AutoScrollSlider';
+import { Link } from 'react-router-dom';
 import {
   motion,
   useInView,
@@ -1197,7 +1198,9 @@ export default function Home() {
               WHAT ARE THE<span>USE CASES</span>
             </h1>
           </motion.div>
-          <button>Learn More</button>
+          <Link to="/use_case">
+  <button>Learn More</button>
+</Link>
         </div>
         <div className="use_case_grid">
           {/* <div className="part">
