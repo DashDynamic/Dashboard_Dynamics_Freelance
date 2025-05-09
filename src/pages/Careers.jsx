@@ -366,8 +366,9 @@ export default function Careers() {
               Your application will be treated with the utmost confidentiality,
               and we appreciate your honesty and accuracy in providing the
               requested information.
-            </p>
-            <button>Application Form</button>
+            </p>  
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSchrI6h9Kj3h3kud0IvTUTh_QCTBdt6pNEZi5D6S8uzcNJCzA/viewform?usp=dialog"><button>Application Form</button></a>
+            
           </div>
         </div>
 
