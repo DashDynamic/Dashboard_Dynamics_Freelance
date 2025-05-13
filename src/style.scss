@@ -4614,7 +4614,51 @@ box-sizing: border-box;
       //   }
       // }
 
-      .grid {
+//       .grid {
+//   margin: 2% 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   gap: 3vw;
+
+//   .member {
+//     width: 28vw;
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+
+//     @media screen and (max-width: 540px) {
+//       width: 47vw;
+//     }
+
+//     img {
+//       width: 100%;
+//     }
+
+//     h1 {
+//       font-family: "Artifakt";
+//       font-size: 1rem;
+//       width: 100%;
+//       text-align: left;
+//       min-height: 18vh;
+//     }
+
+//     .linkedin {
+//       position: absolute;
+//       bottom: 10px;
+//       right: 10px;
+//       font-size: 1.8rem;
+
+//       @media screen and (max-width: 540px) {
+//         font-size: 0.85rem;
+//         bottom: 5px;
+//         right: 5px;
+//       }
+//     }
+//   }
+// }
+
+   .grid {
   margin: 2% 0;
   display: flex;
   flex-wrap: wrap;
