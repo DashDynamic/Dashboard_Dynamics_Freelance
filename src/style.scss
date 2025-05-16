@@ -4428,7 +4428,867 @@ box-sizing: border-box;
   }
 }
 
+//neche wale mere hai
+// #Team {
+//   .landing {
+//     background-image: url("../public/assets/Team/test.png");
+//     color: #000;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     width: 100%;
+//     height: 1000px;
+
+//     @media screen and (max-width: 1024px) {
+//       height: 700px;
+//     }
+
+//     @media screen and (max-width: 544px) {
+//       height: 47vh;
+//       width: 100vw;
+//     }
+
+//     h1 {
+//       width: 100%;
+//       font-family: "artifakt";
+//       margin-top: 40%;
+//       text-align: center;
+//       font-weight: 500;
+//       color: #ffffff;
+
+//       @media screen and (max-width: 540px) {
+//         margin-top: 55%;
+//         font-size: 0.85rem;
+//       }
+//     }
+//   }
+
+//   .container {
+//     height: 555vh;
+//     background-color: #000;
+//     position: relative;
+//   }
+
+//   .box {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 10px;
+//     position: absolute;
+//     background: white;
+//     top: 0;
+//     left: 0;
+
+//     offset-path: path(
+//       "M0 5H947C1041.17 15.3333 1229.5 86.3 1229.5 287.5C1229.5 550.5 1041.17 566 947 579.5L434.5 592C335.667 589.5 111 643 111 851C111 1094.2 252 1154 434.5 1154L947 1168C1041.17 1162.33 1219.77 1241.75 1229.5 1429C1241.5 1660 1041.17 1712.33 947 1718L434.5 1736.5C335.667 1738.67 80.9653 1764.9 103 2034.5C120 2242.5 296.167 2290 395 2286.5L947 2307.5C1041.17 2310.33 1229.5 2366.73 1229.5 2602.5C1229.5 2795.5 1041.17 2865.17 947 2859.5L395 2878.5C291 2878.5 87.5 2948 103 3164.5C118.5 3381 308.333 3429.67 395 3428.5L947 3447C1041.17 3453.33 1248.5 3498 1229.5 3765.5C1214.56 3975.77 1061 3982.5 947 3999H103"
+//     );
+//     /* Add a fallback for unsupported browsers */
+//     @supports (offset-path: path("")) {
+//       offset-path: path(
+//         "M0 5H947C1041.17 15.3333 1229.5 86.3 1229.5 287.5C1229.5 550.5 1041.17 566 947 579.5L434.5 592C335.667 589.5 111 643 111 851C111 1094.2 252 1154 434.5 1154L947 1168C1041.17 1162.33 1219.77 1241.75 1229.5 1429C1241.5 1660 1041.17 1712.33 947 1718L434.5 1736.5C335.667 1738.67 80.9653 1764.9 103 2034.5C120 2242.5 296.167 2290 395 2286.5L947 2307.5C1041.17 2310.33 1229.5 2366.73 1229.5 2602.5C1229.5 2795.5 1041.17 2865.17 947 2859.5L395 2878.5C291 2878.5 87.5 2948 103 3164.5C118.5 3381 308.333 3429.67 395 3428.5L947 3447C1041.17 3453.33 1248.5 3498 1229.5 3765.5C1214.56 3975.77 1061 3982.5 947 3999H103"
+//       );
+//     }
+//   }
+
+//   .teamMembers {
+//     overflow: hidden;
+
+//     .head {
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+
+//       // .subHeading {
+//       //   width: 40%;
+//       //   font-family: "Artifakt";
+//       //   font-weight: 800;
+//       //   font-size: 28px;
+//       //   text-align: center;
+//       //   color: #000;
+//       //   border: 0.5px solid #fff;
+//       //   border-radius: 50px;
+//       //   margin: 10vh 0 10px 0;
+//       //   padding: 10px 0;
+//       //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+//       //   @media screen and (max-width: 540px) {
+//       //     width: 80%;
+//       //     font-size: 0.85rem;
+//       //   }
+//       // }
+
+//     .subHeading {
+//           width: 40%;
+//           font-family: "Artifakt", sans-serif;
+//           font-weight: 800;
+//           font-size: clamp(1.2rem, 2.5vw, 2rem); // Responsive font size
+//           text-align: center;
+//           color: #000;
+//           border: 0.5px solid #fff;
+//           border-radius: 50px;
+//           margin: 10vh auto 10px auto;
+//           padding: 10px 0;
+//           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+//           // Tablet breakpoint
+//           @media screen and (max-width: 1024px) {
+//             width: 60%;
+//           }
+
+//           // Mobile breakpoint
+//           @media screen and (max-width: 768px) {
+//             width: 70%;
+//           }
+
+//           // Small screen / phones
+//           @media screen and (max-width: 540px) {
+//             width: 85%;
+//             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+//           }
+
+//           // Extra small devices
+//           @media screen and (max-width: 360px) {
+//             font-size: 0.85rem;
+//             padding: 8px 0;
+//           }
+//         }
+
+//     }
+
+//     .teamGrid {
+//       margin-top: 5%;
+//       display: grid;
+//       overflow: visible;
+
+//       .web {
+//         @media screen and (max-width: 540px) {
+//           display: none !important;
+//         }
+//       }
+
+//       .mob {
+//         @media screen and (min-width: 540px) {
+//           display: none !important;
+//         }
+//       }
+
+//       // .grid {
+//       //   margin: 2% 0;
+//       //   display: flex;
+//       //   flex-wrap: wrap;
+//       //   justify-content: center;
+//       //   gap: 3vw;
+
+//       //   .member {
+//       //     width: 28vw;
+//       //     display: flex;
+//       //     flex-direction: column;
+//       //     position: relative;
+
+//       //     @media screen and (max-width: 540px) {
+//       //       width: 47vw;
+//       //     }
+
+//       //     img {
+//       //       width: 100%;
+//       //     }
+
+//       //     h1 {
+//       //       font-family: "Artifakt";
+//       //       font-size: 1rem;
+//       //       text-align: left;
+//       //       min-height: 18vh;
+//       //     }
+
+//       //     .linkedin {
+//       //       position: absolute;
+//       //       bottom: 10px;
+//       //       right: 10px;
+//       //       font-size: 1.8rem;
+
+//       //       @media screen and (max-width: 540px) {
+//       //         font-size: 0.85rem;
+//       //         bottom: 5px;
+//       //         right: 5px;
+//       //       }
+//       //     }
+//       //   }
+//       // }
+
+//         .grid {
+//       margin: 2% 0;
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       gap: 2rem;
+
+//     .member {
+//       flex: 1 1 22vw; // fallback width, allows wrapping
+//       max-width: 28vw;
+//       display: flex;
+//       flex-direction: column;
+//       position: relative;
+//       box-sizing: border-box;
+//       padding: 1rem;
+
+//       img {
+//         width: 100%;
+//         height: auto;
+//         object-fit: cover;
+//       }
+
+//       h1 {
+//         font-family: "Artifakt";
+//         font-size: clamp(0.9rem, 2vw, 1.1rem);
+//         text-align: left;
+//         min-height: 10vh;
+//       }
+
+//       .linkedin {
+//         position: absolute;
+//         bottom: 10px;
+//         right: 10px;
+//         font-size: clamp(1rem, 2vw, 1.8rem);
+//       }
+
+//       // Small mobile devices
+//       @media screen and (max-width: 540px) {
+//         flex: 1 1 45%;
+//         max-width: 47vw;
+
+//         .linkedin {
+//           bottom: 5px;
+//           right: 5px;
+//         }
+//       }
+
+//           // Tablets
+//           @media screen and (min-width: 541px) and (max-width: 768px) {
+//             flex: 1 1 40%;
+//             max-width: 42vw;
+//           }
+
+//           // Laptops
+//           @media screen and (min-width: 769px) and (max-width: 1200px) {
+//             flex: 1 1 30%;
+//             max-width: 32vw;
+//           }
+
+//           // Large screens
+//           @media screen and (min-width: 1201px) {
+//             flex: 1 1 22%;
+//             max-width: 25vw;
+//           }
+//         }
+//       }
+
+
+//       .scnd,
+//       .thd {
+//         margin-top: 10vh;
+
+//         @media screen and (max-width: 540px) {
+//           margin-top: 5%;
+//           margin-bottom: -3%;
+//         }
+//       }
+
+//       .scnd {
+//         @media screen and (max-width: 540px) {
+//           margin-top: 15%;
+//         }
+//       }
+//     }
+//   }
+
+//   .partners {
+//     height: 100vh;
+
+//     .heading {
+//       width: 35vw;
+//       font-family: "Artifakt";
+//       font-weight: 900;
+//       font-size: 28px;
+//       text-align: center;
+//       color: #000;
+//       border: 2px solid #8e8787;
+//       border-radius: 5px;
+//       margin: 10vh auto 0 auto;
+//       padding: 10px 0;
+//     }
+
+//     .fstLine,
+//     .lstLine {
+//       height: 5vh;
+//       display: flex;
+//       align-items: center;
+
+//       hr {
+//         height: 3px;
+//         width: 70%;
+//         border: none;
+//         border-top: 3px solid #000;
+//       }
+
+//       .sqr {
+//         height: 14px;
+//         width: 13px;
+//         background-color: #000;
+//       }
+//     }
+
+//     .fstLine {
+//       margin-top: 15vh;
+//       justify-content: flex-end;
+//     }
+
+//     .lstLine {
+//       margin-top: 5vh;
+//       justify-content: flex-start;
+//     }
+
+//     .container {
+//       width: 100vw;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+
+//       .lft,
+//       .rght {
+//         min-width: 10vw;
+//         height: 40vh;
+//         background-color: #f9f9f9;
+//       }
+
+//       .parteners_li {
+//         min-width: 80vw;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         img {
+//           height: 100%;
+//           width: 100%;
+//           margin: 20px;
+//           padding: 20px;
+//         }
+
+//         .carouselKaItem {
+//           width: 80vw;
+//           height: 30vh;
+//         }
+//       }
+//     }
+//   }
+
+//   .journey {
+//     height: 290vh;
+
+//     .cols {
+//       display: flex;
+//       margin-top: 20vh;
+//       height: 240vh;
+
+//       svg {
+//         width: 85%;
+//         height: 150%;
+//         position: absolute;
+//         right: 0;
+//         margin-top: 15%;
+//       }
+
+//       .right,
+//       .left {
+//         height: 240vh;
+//         width: 150vw;
+//         display: flex;
+//         flex-direction: column;
+//       }
+
+//       .right {
+//         .scndAchivement {
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: flex-end;
+//           margin-top: 60vh;
+
+//           .achieve {
+//             position: absolute;
+//             width: 30vw;
+//             margin-left: 13vw;
+//             margin-bottom: 10vh;
+//           }
+//         }
+
+//         .thdAchivement {
+//           position: relative;
+//           width: 30vw;
+//           margin-top: 5vh;
+//           margin-left: 13vw;
+//         }
+
+//         .sxthAchivement {
+//           position: relative;
+//           width: 30vw;
+//           align-self: flex-end;
+//           margin-top: 7vh;
+//           margin-right: 4vw;
+//         }
+//       }
+
+//       .left {
+//         .fstAchivement {
+//           width: 20vw;
+//           margin-top: 5vh;
+//           margin-left: 13vw;
+//         }
+
+//         .frthAchivement {
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: flex-end;
+
+//           .thdBox {
+//             position: relative;
+//             width: 40vw;
+//             margin-top: 15vh;
+//           }
+
+//           .achieve {
+//             position: absolute;
+//             width: 27vw;
+//             margin-left: 12vw;
+//           }
+//         }
+
+//         .fthAchivement {
+//           position: relative;
+//           width: 20vw;
+//           align-self: flex-end;
+//           margin-top: 5vh;
+//           margin-left: 15vw;
+//         }
+//       }
+//     }
+
+//     .downHead {
+//       width: 100vw;
+//       display: flex;
+//       justify-content: center;
+//       align-items: flex-start;
+
+//       h1 {
+//         width: 42%;
+//         font-family: "Artifakt";
+//         font-weight: 900;
+//         font-size: 28px;
+//         text-align: center;
+//         color: #000;
+//         border: 2px solid #8e8787;
+//         border-radius: 5px;
+//         margin-top: 10vh;
+//         padding: 10px 0;
+
+//         a {
+//           padding-left: 1vw;
+//           font-weight: 400;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// #Team {
+//   .landing {
+//     background-image: url(../public/assets/Team/test.png);
+//     color: #000;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     width: 100%;
+//     height: 1000px; // default (desktop)
+  
+//     // Medium screens (tablet)
+//     @media screen and (max-width: 1024px) {
+//       height: 700px;
+//     }
+  
+//     // Small screens (phones)
+//     @media screen and (max-width: 544px) {
+//       height: 47vh;
+//       width: 100vw;
+//     }
+  
+//     h1 {
+//       width: 100%;
+//       font-family: "artifakt";
+//       margin-top: 40%;
+//       text-align: center;
+//       font-weight: 500;
+//       color: #ffffff;
+  
+//       @media screen and (max-width: 540px) {
+//         margin-top: 55%;
+//         width: 100%;
+//         font-size: 0.85rem;
+//       }
+//     }
+//   }
+  
+
+//   .container {
+//     height: 555vh;
+//     background-color: #000;
+//     position: relative;
+//   }
+
+//   .box {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 10px;
+//     position: absolute;
+//     background: white;
+//     top: 0;
+//     left: 0;
+//     offset-path: path(
+//       "M0 5H947C1041.17 15.3333 1229.5 86.3 1229.5 287.5C1229.5 550.5 1041.17 566 947 579.5L434.5 592C335.667 589.5 111 643 111 851C111 1094.2 252 1154 434.5 1154L947 1168C1041.17 1162.33 1219.77 1241.75 1229.5 1429C1241.5 1660 1041.17 1712.33 947 1718L434.5 1736.5C335.667 1738.67 80.9653 1764.9 103 2034.5C120 2242.5 296.167 2290 395 2286.5L947 2307.5C1041.17 2310.33 1229.5 2366.73 1229.5 2602.5C1229.5 2795.5 1041.17 2865.17 947 2859.5L395 2878.5C291 2878.5 87.5 2948 103 3164.5C118.5 3381 308.333 3429.67 395 3428.5L947 3447C1041.17 3453.33 1248.5 3498 1229.5 3765.5C1214.56 3975.77 1061 3982.5 947 3999H103"
+//     );
+//   }
+
+//   .teamMembers {
+//     overflow: hidden;
+//     height: auto;
+//     @media screen and (max-width: 540px) {
+//       height: auto;
+//     }
+//     .head {
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       .subHeading {
+//         width: 40%;
+//         height: auto;
+
+//         @media screen and (max-width: 540px) {
+//           width: 80%;
+//           font-size: 0.85rem;
+//         }
+
+//         font-family: "Artifakt";
+//         font-style: normal;
+//         font-weight: 800;
+//         font-size: 28px;
+//         text-align: center;
+
+//         color: #000000;
+//         border: 0.5px solid #ffffff;
+//         border-radius: 50px;
+
+//         margin-top: 10vh;
+//         padding-top: 10px;
+//         padding-bottom: 10px;
+//         margin-bottom: 10px;
+
+//         /* Add the box shadow */
+//         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+//       }
+//     }
+
+//     .teamGrid {
+//       .web {
+//         // display: none !important;
+//         @media screen and (max-width: 540px) {
+//           display: none !important;
+//         }
+//       }
+
+//       .mob {
+//         @media screen and (min-width: 540px) {
+//           display: none !important;
+//         }
+//       }
+
+//       margin-top: 5%;
+//       overflow: visible;
+//       grid-template-columns: repeat(auto-fit, minmax(1fr, 200px));
+     
+
+//       .grid {
+//   margin: 2% 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   gap: 3vw;
+
+//   .member {
+//     width: 28vw;
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+
+//     @media screen and (max-width: 540px) {
+//       width: 47vw;
+//     }
+
+//     img {
+//       width: 100%;
+//     }
+
+//     h1 {
+//       font-family: "Artifakt";
+//       font-size: 1rem;
+//       width: 100%;
+//       text-align: left;
+//       min-height: 18vh;
+//     }
+
+//     .linkedin {
+//       position: relative;
+//       bottom: 55px;
+//       left: 489px;
+//       font-size: 1.8rem;
+
+//       @media screen and (max-width: 540px) {
+//         font-size: 0.85rem;
+//         bottom: 5px;
+//         right: 5px;
+//       }
+//     }
+//   }
+// }
+
+
+//       .scnd,
+//       .thd {
+//         margin-top: 10vh;
+//         @media screen and (max-width: 540px) {
+//           margin-top: 5%;
+//           margin-bottom: -3%;
+//         }
+//       }
+//       .scnd{
+//         @media screen and (max-width: 540px) {
+//           margin-top: 15%;
+//         }
+//       }
+//     }
+//   }
+
+//   .partners {
+//     height: 100vh;
+//     .heading {
+//       width: 35vw;
+//       height: auto;
+
+//       font-family: "Artifakt";
+//       font-style: normal;
+//       font-weight: 900;
+//       font-size: 28px;
+//       // line-height: 31px;
+//       text-align: center;
+
+//       color: #000000;
+//       border: 2px solid #8e8787;
+//       border-radius: 5px;
+
+//       margin-top: 10vh;
+//       padding-top: 10px;
+//       padding-bottom: 10px;
+//       margin-left: 50vw;
+//     }
+
+//     .fstLine {
+//       height: 5vh;
+//       margin-top: 15vh;
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-end;
+//       hr {
+//         height: 3px;
+//         width: 70%;
+//         border: none; /* Removes the default border */
+//         border-top: 3px solid #000000; /* Sets the top border to a solid line */
+//       }
+//       .sqr {
+//         height: 14px;
+//         width: 13px;
+//         background-color: #000000;
+//       }
+//     }
+
+//     .container {
+//       width: 100vw;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       .lft,
+//       .rght {
+//         min-width: 10vw;
+//         height: 40vh;
+//         background-color: #f9f9f9;
+//       }
+//       .parteners_li {
+//         min-width: 80vw;
+//         overflow: visible;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         img {
+//           overflow: hidden !important;
+//           height: 100%;
+//           width: 100%;
+//           margin: 20px;
+//           padding: 20px;
+//         }
+//         .carouselKaItem {
+//           overflow: visible;
+//           width: 80vw;
+//           height: 30vh;
+//           .slick-dots {
+//             // overflow: visible;
+//           }
+//         }
+//       }
+//     }
+
+//     .lstLine {
+//       height: 5vh;
+//       margin-top: 5vh;
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-start;
+//       hr {
+//         height: 3px;
+//         width: 70%;
+//         border: none; /* Removes the default border */
+//         border-top: 3px solid #000000; /* Sets the top border to a solid line */
+//       }
+//       .sqr {
+//         height: 14px;
+//         width: 13px;
+//         background-color: #000000;
+//       }
+//     }
+//   }
+
+//   .journey {
+//     height: 290vh;
+//     .cols {
+//       display: flex;
+//       margin-top: 20vh;
+//       height: 240vh;
+
+//       svg {
+//         scale: 100%;
+//         width: 85%;
+//         height: 150%;
+//         position: absolute;
+//         right: 0;
+//         margin-top: 15%;
+//       }
+
+//       .right,
+//       .left {
+//         height: 240vh;
+//         width: 150vw;
+//         display: flex;
+//         flex-direction: column;
+//       }
+
+//       .right {
+//         .scndAchivement {
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: flex-end;
+//           margin-top: 60vh;
+//           .achieve {
+//             position: absolute;
+//             width: 30vw;
+//             margin-left: 13vw;
+//             margin-bottom: 10vh;
+//           }
+//         }
+//         .thdAchivement {
+//           position: relative;
+//           width: 30vw;
+//           margin-top: 5vh;
+//           margin-left: 13vw;
+//         }
+//         .sxthAchivement {
+//           position: relative;
+//           width: 30vw;
+//           align-self: flex-end;
+//           margin-top: 7vh;
+//           margin-right: 4vw;
+//         }
+//       }
+
+//       .left {
+//         .fstAchivement {
+//           width: 20vw;
+//           margin-top: 5vh;
+//           margin-left: 13vw;
+//         }
+
+//         .frthAchivement {
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: flex-end;
+//           .thdBox {
+//             position: relative;
+//             width: 40vw;
+//             margin-top: 15vh;
+//           }
+//           .achieve {
+//             position: absolute;
+//             width: 27vw;
+//             margin-left: 12vw;
+//             // margin-bottom: 10vh;
+//           }
+//         }
+
+//         .fthAchivement {
+//           position: relative;
+//           width: 20vw;
+//           align-self: flex-end;
+//           margin-top: 5vh;
+//           margin-left: 15vw;
+//         }
+//       }
+//     }
+
+//     .downHead {
+//       width: 100vw;
+//       display: flex;
+//       justify-content: center;
+//       align-items: flex-start;
+//       h1 {
+//         width: 42%;
+//         height: auto;
+
+//         font-family: "Artifakt";
+//         font-style: normal;
+//         font-weight: 900;
+//         font-size: 28px;
+//         text-align: center;
+
+//         color: #000000;
+//         border: 2px solid #8e8787;
+//         border-radius: 5px;
+
+//         margin-top: 10vh;
+//         padding-top: 10px;
+//         padding-bottom: 10px;
+
+//         a {
+//           padding-left: 1vw;
+//           font-weight: 400;
+//         }
+//       }
+//     }
+//   }
+// }
 #Team {
+
   .landing {
     background-image: url(../public/assets/Team/test.png);
     color: #000;
@@ -4463,7 +5323,6 @@ box-sizing: border-box;
       }
     }
   }
-  
 
   .container {
     height: 555vh;
@@ -4525,300 +5384,121 @@ box-sizing: border-box;
     }
 
     .teamGrid {
-      .web {
-        // display: none !important;
-        @media screen and (max-width: 540px) {
-          display: none !important;
-        }
-      }
+  .web {
+    @media screen and (max-width: 540px) {
+      display: none !important;
+    }
+  }
 
-      .mob {
-        @media screen and (min-width: 540px) {
-          display: none !important;
-        }
-      }
+  .mob {
+    @media screen and (min-width: 540px) {
+      display: none !important;
+    }
+  }
 
-      margin-top: 5%;
-      overflow: visible;
-      grid-template-columns: repeat(auto-fit, minmax(1fr, 200px));
-     
+  margin-top: 5%;
+  overflow: visible;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 200px));
 
-      .grid {
-  margin: 2% 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3vw;
-
-  .member {
-    width: 28vw;
+  .grid {
+    margin-top: -3%;
+    margin-bottom: -3%;
+    width: 100vw;
+    overflow: visible;
     display: flex;
-    flex-direction: column;
-    position: relative;
+    justify-content: center;
+    align-items: start;
+    gap: 3vw;
 
     @media screen and (max-width: 540px) {
-      width: 47vw;
+      margin-top: 2%;
+      margin-bottom: -15%;
     }
 
     img {
-      width: 100%;
-    }
-
-    h1 {
-      font-family: "Artifakt";
-      font-size: 1rem;
-      width: 100%;
-      text-align: left;
-      min-height: 18vh;
-    }
-
-    .linkedin {
-      position: absolute;
-      bottom: 55px;
-      left: 489px;
-      font-size: 1.8rem;
-
+      width: 28vw;
       @media screen and (max-width: 540px) {
-        font-size: 0.85rem;
-        bottom: 5px;
-        right: 5px;
+        width: 47vw;
       }
     }
-  }
-}
 
-
-      .scnd,
-      .thd {
-        margin-top: 10vh;
-        @media screen and (max-width: 540px) {
-          margin-top: 5%;
-          margin-bottom: -3%;
-        }
-      }
-      .scnd{
-        @media screen and (max-width: 540px) {
-          margin-top: 15%;
-        }
-      }
-    }
-  }
-
-  .partners {
-    height: 100vh;
-    .heading {
-      width: 35vw;
-      height: auto;
-
-      font-family: "Artifakt";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 28px;
-      // line-height: 31px;
-      text-align: center;
-
-      color: #000000;
-      border: 2px solid #8e8787;
-      border-radius: 5px;
-
-      margin-top: 10vh;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-left: 50vw;
-    }
-
-    .fstLine {
-      height: 5vh;
-      margin-top: 15vh;
+    .member {
+      overflow: visible;
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      hr {
-        height: 3px;
-        width: 70%;
-        border: none; /* Removes the default border */
-        border-top: 3px solid #000000; /* Sets the top border to a solid line */
-      }
-      .sqr {
-        height: 14px;
-        width: 13px;
-        background-color: #000000;
-      }
-    }
+      flex-direction: column;
 
-    .container {
-      width: 100vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .lft,
-      .rght {
-        min-width: 10vw;
-        height: 40vh;
-        background-color: #f9f9f9;
-      }
-      .parteners_li {
-        min-width: 80vw;
-        overflow: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          overflow: hidden !important;
-          height: 100%;
-          width: 100%;
-          margin: 20px;
-          padding: 20px;
-        }
-        .carouselKaItem {
-          overflow: visible;
-          width: 80vw;
-          height: 30vh;
-          .slick-dots {
-            // overflow: visible;
-          }
-        }
-      }
-    }
-
-    .lstLine {
-      height: 5vh;
-      margin-top: 5vh;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      hr {
-        height: 3px;
-        width: 70%;
-        border: none; /* Removes the default border */
-        border-top: 3px solid #000000; /* Sets the top border to a solid line */
-      }
-      .sqr {
-        height: 14px;
-        width: 13px;
-        background-color: #000000;
-      }
-    }
-  }
-
-  .journey {
-    height: 290vh;
-    .cols {
-      display: flex;
-      margin-top: 20vh;
-      height: 240vh;
-
-      svg {
-        scale: 100%;
-        width: 85%;
-        height: 150%;
-        position: absolute;
-        right: 0;
-        margin-top: 15%;
-      }
-
-      .right,
-      .left {
-        height: 240vh;
-        width: 150vw;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .right {
-        .scndAchivement {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          margin-top: 60vh;
-          .achieve {
-            position: absolute;
-            width: 30vw;
-            margin-left: 13vw;
-            margin-bottom: 10vh;
-          }
-        }
-        .thdAchivement {
-          position: relative;
-          width: 30vw;
-          margin-top: 5vh;
-          margin-left: 13vw;
-        }
-        .sxthAchivement {
-          position: relative;
-          width: 30vw;
-          align-self: flex-end;
-          margin-top: 7vh;
-          margin-right: 4vw;
-        }
-      }
-
-      .left {
-        .fstAchivement {
-          width: 20vw;
-          margin-top: 5vh;
-          margin-left: 13vw;
-        }
-
-        .frthAchivement {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          .thdBox {
-            position: relative;
-            width: 40vw;
-            margin-top: 15vh;
-          }
-          .achieve {
-            position: absolute;
-            width: 27vw;
-            margin-left: 12vw;
-            // margin-bottom: 10vh;
-          }
-        }
-
-        .fthAchivement {
-          position: relative;
-          width: 20vw;
-          align-self: flex-end;
-          margin-top: 5vh;
-          margin-left: 15vw;
-        }
-      }
-    }
-
-    .downHead {
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
       h1 {
-        width: 42%;
-        height: auto;
-
         font-family: "Artifakt";
-        font-style: normal;
-        font-weight: 900;
-        font-size: 28px;
-        text-align: center;
+        font-size: 1rem;
+        width: 23vw;
+        justify-self: flex-end;
+        align-self: baseline;
+        text-align: justify;
+        margin-left: 12%;
+        min-height: 18vh;
+      }
 
-        color: #000000;
-        border: 2px solid #8e8787;
-        border-radius: 5px;
-
-        margin-top: 10vh;
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        a {
-          padding-left: 1vw;
-          font-weight: 400;
+      .linkedin {
+        font-size: 1.8rem;
+        align-self: flex-end;
+        transform: translate(-110%, -200%);
+        @media screen and (max-width: 540px) {
+          font-size: 0.85rem;
         }
       }
     }
   }
+
+  // Row-specific spacing
+  .scnd,
+  .thd,
+  .frth,
+  .fifth,
+  .sixth {
+    margin-top: 10vh;
+
+    @media screen and (max-width: 540px) {
+      margin-top: 5%;
+      margin-bottom: -3%;
+    }
+  }
+
+  .scnd {
+    @media screen and (max-width: 540px) {
+      margin-top: 15%;
+    }
+  }
+
+  .frth {
+    @media screen and (max-width: 540px) {
+      margin-top: 12%;
+    }
+  }
+
+  .fifth {
+    @media screen and (max-width: 540px) {
+      margin-top: 15%;
+    }
+  }
+
+  .sixth {
+    @media screen and (max-width: 540px) {
+      margin-top: 18%;
+    }
+  }
+  .sev {
+    @media screen and (max-width: 540px) {
+      margin-top: 18%;
+    }
+  }
 }
 
+  }
+
+
+
+ 
+}
 #Journey {
   overflow: visible;
   .landing {
@@ -5046,10 +5726,16 @@ box-sizing: border-box;
           }
           // position: relative;
           .linkedin {
-            font-size: 1.8rem;
-            align-self: flex-end;
-            transform: translate(-110%, -200%);
-          }
+  font-size: clamp(1rem, 2vw, 1.8rem); // responsive font size
+  align-self: flex-end;
+  transform: translate(-110%, -200%); // default desktop position
+
+  @media screen and (max-width: 540px) {
+    font-size: 0.85rem;
+    transform: translate(-70%, -100%); // adjust for smaller screens
+  }
+}
+
         }
       }
 
